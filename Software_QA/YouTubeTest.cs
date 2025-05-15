@@ -5,6 +5,9 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using Software_QA.PageObjectModel;
+using Software_QA.PageObjectModel.Components;
+using Software_QA.PageObjectModel.Pages;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Software_QA
@@ -12,37 +15,69 @@ namespace Software_QA
     [TestClass]
     public class YouTubeTest
     {
-        [TestMethod]
-        public void PlayVideo1()
+        private IWebDriver driver;
+        private HomePage homePage;
+        private VideoPage videoPage;
+        private NavigationBar navigationBar;
+        private SearchResultsPage searchResultsPage;
+        private WebDriverWait wait;
+
+        [TestInitialize]
+        public void Setup()
         {
-            IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://www.youtube.com");
+            var options = new ChromeOptions();
+            options.AddArguments("incognito");
+            driver = new ChromeDriver(options);
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+
             driver.Manage().Window.Maximize();
-            Thread.Sleep(1000);
+            driver.Navigate().GoToUrl("https://www.youtube.com");
+
+            homePage = new HomePage(driver, wait);
+            homePage.AcceptCookies();
+        }
+
+        [TestMethod]
+        public void PlayVideo()
+        {
+            videoPage = new VideoPage(driver, wait);
+            navigationBar = new NavigationBar(driver, wait);
+            searchResultsPage = new SearchResultsPage(driver, wait);
+
+            string query = "no one like you";
+            navigationBar.SearchFor(query);
             
-            //Accept cookies
-            driver.FindElement(By.XPath("//*[@id=\"content\"]/div[2]/div[6]/div[1]/ytd-button-renderer[2]/yt-button-shape/button")).Click();
-            Thread.Sleep(1000);
+            wait.Until(d => d.FindElement(By.CssSelector("ytd-video-renderer")));
+            searchResultsPage.OpenVideoByTitle("no one like you");
+
+
+            wait.Until(d => d.FindElement(By.CssSelector(".html5-video-player")));
+            videoPage.ToggleFullscreen();
             
-            //start search query
-            driver.FindElement(By.Name("search_query")).SendKeys("behind blue eyes");
-            driver.FindElement(By.XPath("//button[@aria-label='Search' and @title='Search']")).Click();
-            Thread.Sleep(1000);
+            
+            Thread.Sleep(5000);
+            videoPage.ToggleFullscreen();
+        }
 
-            //find the video with solicited title
-            driver.FindElement(By.XPath("//a[@id='video-title' and @title=concat('Limp Bizkit ', '\"', 'Behind Blue Eyes', '\"')]")).Click();
-            Thread.Sleep(3000);
+        [TestMethod]
+        public void AddVideoToQueue()
+        {
+            videoPage = new VideoPage(driver, wait);
+            navigationBar = new NavigationBar(driver, wait);
+            searchResultsPage = new SearchResultsPage(driver,wait);
 
-            //go fullscreen
-            //driver.FindElement(By.CssSelector("button.ytp-fullscreen-button.ytp-button")).Click();
-            new Actions(driver).SendKeys("f").Perform();
-            Thread.Sleep(10000);
+            string query = "10 seconds timer";
+            navigationBar.SearchFor(query);
 
-            //exit fullscreen
-            //driver.FindElement(By.CssSelector("button.ytp-fullscreen-button.ytp-button")).Click();
-            new Actions(driver).SendKeys("f").Perform();
+            searchResultsPage.OpenVideoByTitle("10 seconds timer");
+            wait.Until(d => d.FindElement(By.CssSelector(".html5-video-player")));
+            videoPage.AddToQueue();
+            videoPage.NextVideo();
+        }
 
-            //close the browser
+        [TestCleanup]
+        public void Cleanup()
+        {
             driver.Quit();
         }
     }

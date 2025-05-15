@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{92A98673-498F-485D-B258-EE0FDC49C99D}|Software_QA\\Software_QA.csproj|C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\software_qa\\pageobjectmodel\\components\\navigationbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92A98673-498F-485D-B258-EE0FDC49C99D}|Software_QA\\Software_QA.csproj|solutionrelative:software_qa\\pageobjectmodel\\components\\navigationbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92A98673-498F-485D-B258-EE0FDC49C99D}|Software_QA\\Software_QA.csproj|C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\software_qa\\pageobjectmodel\\pages\\videopage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92A98673-498F-485D-B258-EE0FDC49C99D}|Software_QA\\Software_QA.csproj|solutionrelative:software_qa\\pageobjectmodel\\pages\\videopage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{92A98673-498F-485D-B258-EE0FDC49C99D}|Software_QA\\Software_QA.csproj|c:\\users\\sandu\\onedrive\\desktop\\software_qa\\software_qa\\youtubetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92A98673-498F-485D-B258-EE0FDC49C99D}|Software_QA\\Software_QA.csproj|solutionrelative:software_qa\\youtubetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92A98673-498F-485D-B258-EE0FDC49C99D}|Software_QA\\Software_QA.csproj|C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\software_qa\\pageobjectmodel\\pages\\searchresultspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92A98673-498F-485D-B258-EE0FDC49C99D}|Software_QA\\Software_QA.csproj|solutionrelative:software_qa\\pageobjectmodel\\pages\\searchresultspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 334,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VideoPage.cs",
+              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\Software_QA\\PageObjectModel\\Pages\\VideoPage.cs",
+              "RelativeDocumentMoniker": "Software_QA\\PageObjectModel\\Pages\\VideoPage.cs",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\Software_QA\\PageObjectModel\\Pages\\VideoPage.cs",
+              "RelativeToolTip": "Software_QA\\PageObjectModel\\Pages\\VideoPage.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T17:39:10.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SearchResultsPage.cs",
+              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\Software_QA\\PageObjectModel\\Pages\\SearchResultsPage.cs",
+              "RelativeDocumentMoniker": "Software_QA\\PageObjectModel\\Pages\\SearchResultsPage.cs",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\Software_QA\\PageObjectModel\\Pages\\SearchResultsPage.cs",
+              "RelativeToolTip": "Software_QA\\PageObjectModel\\Pages\\SearchResultsPage.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T17:25:52.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NavigationBar.cs",
+              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\Software_QA\\PageObjectModel\\Components\\NavigationBar.cs",
+              "RelativeDocumentMoniker": "Software_QA\\PageObjectModel\\Components\\NavigationBar.cs",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\Software_QA\\PageObjectModel\\Components\\NavigationBar.cs",
+              "RelativeToolTip": "Software_QA\\PageObjectModel\\Components\\NavigationBar.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T17:19:22.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "YouTubeTest.cs",
               "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\Software_QA\\YouTubeTest.cs",
               "RelativeDocumentMoniker": "Software_QA\\YouTubeTest.cs",
-              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\Software_QA\\YouTubeTest.cs*",
-              "RelativeToolTip": "Software_QA\\YouTubeTest.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA3wCgAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\Software_QA\\YouTubeTest.cs",
+              "RelativeToolTip": "Software_QA\\YouTubeTest.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAQwFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T16:46:46.999Z",
               "EditorCaption": ""
