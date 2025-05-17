@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|c:\\users\\sandu\\onedrive\\desktop\\unittestproject\\unittestproject\\proiectcentric\\saucedemotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|solutionrelative:proiectcentric\\saucedemotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\pageobjectmodel\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|solutionrelative:proiectcentric\\pageobjectmodel\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\pageobjectmodel\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|solutionrelative:proiectcentric\\pageobjectmodel\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 334,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomePage.cs",
+              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\PageObjectModel\\HomePage.cs",
+              "RelativeDocumentMoniker": "proiectcentric\\PageObjectModel\\HomePage.cs",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\PageObjectModel\\HomePage.cs",
+              "RelativeToolTip": "proiectcentric\\PageObjectModel\\HomePage.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T21:08:08.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\PageObjectModel\\LoginPage.cs",
+              "RelativeDocumentMoniker": "proiectcentric\\PageObjectModel\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\PageObjectModel\\LoginPage.cs",
+              "RelativeToolTip": "proiectcentric\\PageObjectModel\\LoginPage.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T20:38:39.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SauceDemoTest.cs",
+              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\SauceDemoTest.cs",
+              "RelativeDocumentMoniker": "proiectcentric\\SauceDemoTest.cs",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\SauceDemoTest.cs",
+              "RelativeToolTip": "proiectcentric\\SauceDemoTest.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T20:28:54.077Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
