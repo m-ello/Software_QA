@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Permissions;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
@@ -17,20 +18,24 @@ namespace proiectcentric
         private WebDriverWait wait;
         private LoginPage loginPage;
         private HomePage homePage;
+        private YourCartPage cartPage;
 
         [TestInitialize]
         public void Setup()
         {
-            driver = new ChromeDriver();
+            var options = new ChromeOptions();
+            options.AddArguments("incognito");
+            driver = new ChromeDriver(options);
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
             loginPage = new LoginPage(driver, wait);
             homePage = new HomePage(driver, wait);
+            cartPage = new YourCartPage(driver, wait);
 
             driver.Navigate().GoToUrl("https://www.saucedemo.com/");
             driver.Manage().Window.Maximize();
+            Login();
         }
 
-        [TestMethod]
         public void Login()
         {
             string username = "standard_user";
@@ -47,18 +52,15 @@ namespace proiectcentric
         [TestMethod]
         public void Logout() 
         {
-            Login();
             homePage.Logout();
 
             wait.Until(d => d.Url.Contains("saucedemo.com"));
-            Assert.IsTrue(driver.Url.Contains("login"));
+            Assert.IsTrue(driver.PageSource.Contains("Login"));
         }
 
         [TestMethod]
         public void AddToCart()
         {
-            Login();
-
             string productName = "Sauce Labs Backpack";
 
             homePage.AddToCart(productName);
@@ -71,91 +73,54 @@ namespace proiectcentric
         public void Checkout()
         {
             AddToCart();
-            driver.FindElement(By.Id("checkout")).Click();
-            wait.Until(d => d.Url.Contains("checkout-step-one"));
-
-            // ✍️ Completează formularul de checkout
-            driver.FindElement(By.Id("first-name")).SendKeys("Ion");
-            driver.FindElement(By.Id("last-name")).SendKeys("Popescu");
-            driver.FindElement(By.Id("postal-code")).SendKeys("123456");
-            driver.FindElement(By.Id("continue")).Click();
-
-            wait.Until(d => d.Url.Contains("checkout-step-two"));
-            driver.FindElement(By.Id("finish")).Click();
-
-            // ✅ Verificare mesaj final
-            wait.Until(d => d.Url.Contains("checkout-complete"));
-            bool isSuccess = driver.PageSource.Contains("THANK YOU FOR YOUR ORDER");
-
-            Console.WriteLine(isSuccess
-                ? "❌ Comanda NU s-a finalizat corect!"
-                : "🎉 Comandă finalizată cu succes!");
+            homePage.GoToCart();
+            cartPage.Checkout();
+            Assert.IsTrue(driver.PageSource.Contains("Thank you for your order"));
         }
 
         [TestMethod]
-        public void maimulte()
+        public void CheckCartBadge()
         {
-            var options = new ChromeOptions();
-            options.AddArguments("incognito");
-            IWebDriver driver = new ChromeDriver(options);
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            int itemsToAdd = 3;
+            wait.Until(d => d.FindElement(By.ClassName("inventory_list")));
+            AddNItemsToCart(itemsToAdd);
 
-            driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
-
-            // 1. Logare
-            driver.FindElement(By.Id("user-name")).SendKeys("standard_user");
-            driver.FindElement(By.Id("password")).SendKeys("secret_sauce");
-            driver.FindElement(By.Id("login-button")).Click();
-
-            // Aștept să apară pagina de produse
+            var cartBadge = driver.FindElement(By.ClassName("shopping_cart_badge"));
+            Assert.IsTrue(cartBadge.Text == itemsToAdd.ToString());
+        }
+        public void AddNItemsToCart(int itemsToAdd = 1)
+        {
             wait.Until(d => d.FindElement(By.ClassName("inventory_list")));
 
-            // 2. Sortează elementele după "Price (low to high)"
-            var sortDropdown = driver.FindElement(By.ClassName("product_sort_container"));
-            var selectElement = new SelectElement(sortDropdown);
-            selectElement.SelectByValue("lohi");
-
-            // 3. Adaugă 3 elemente în coș
-            // Pentru exemplu, adaug primele 3 produse vizibile (prin butoane Add to cart)
             var addButtons = driver.FindElements(By.CssSelector("button.btn_inventory"));
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < itemsToAdd; i++)
             {
                 addButtons[i].Click();
             }
 
-            // 4. Verifică dacă sunt 3 în coș
             var cartBadge = driver.FindElement(By.ClassName("shopping_cart_badge"));
-            if (cartBadge.Text != "3")
-            {
-                Console.WriteLine("EROARE: Numărul de produse din coș NU este 3, este " + cartBadge.Text);
-            }
-            else
-            {
-                Console.WriteLine("Succes: Sunt 3 produse în coș.");
-            }
+            Assert.IsTrue(cartBadge.Text == itemsToAdd.ToString());
+        }
 
-            // 5. Mergi în coș
-            driver.FindElement(By.ClassName("shopping_cart_link")).Click();
-
-            // Așteaptă lista de produse din coș
+        [TestMethod]
+        public void RemoveFromCart()
+        {
+            var itemsToAdd = 4;
+            AddNItemsToCart(itemsToAdd);
+            homePage.GoToCart();
             wait.Until(d => d.FindElements(By.ClassName("cart_item")).Count > 0);
 
-            // 6. Șterge 2 produse (primele 2 butoane Remove)
+            var itemsToRemove = 2;
             var removeButtons = driver.FindElements(By.CssSelector("button.cart_button"));
-            removeButtons[0].Click();
-            removeButtons[1].Click();
+            for (int i = 0; i < itemsToRemove && i < removeButtons.Count; i++)
+            {
+                removeButtons[removeButtons.Count - 1 - i].Click();
+            }
 
-            // 7. Verifică dacă au rămas 1 produs în coș
             var remainingItems = driver.FindElements(By.ClassName("cart_item")).Count;
-            if (remainingItems != 1)
-            {
-                Console.WriteLine("EROARE: Numărul de produse rămas în coș NU este 1, este " + remainingItems);
-            }
-            else
-            {
-                Console.WriteLine("Succes: Au rămas 1 produs în coș după ștergere.");
-            }
+            var expectedValue = itemsToAdd - itemsToRemove;
+
+            Assert.IsTrue(remainingItems == expectedValue);
         }
 
         [TestCleanup]

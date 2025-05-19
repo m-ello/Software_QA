@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\",
+  "WorkspaceRootPath": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|c:\\users\\sandu\\onedrive\\desktop\\unittestproject\\unittestproject\\proiectcentric\\saucedemotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|c:\\users\\sandu\\onedrive\\desktop\\software_qa\\saucedemo\\proiectcentric\\saucedemotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|solutionrelative:proiectcentric\\saucedemotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\pageobjectmodel\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\proiectcentric\\pageobjectmodel\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|solutionrelative:proiectcentric\\pageobjectmodel\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\pageobjectmodel\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|c:\\users\\sandu\\onedrive\\desktop\\software_qa\\saucedemo\\proiectcentric\\pageobjectmodel\\yourcartpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|solutionrelative:proiectcentric\\pageobjectmodel\\yourcartpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\proiectcentric\\pageobjectmodel\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1715EB50-EB82-470E-9D5D-12C75133A427}|proiectcentric\\QAPROJ.csproj|solutionrelative:proiectcentric\\pageobjectmodel\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,41 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 334,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "YourCartPage.cs",
+              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\proiectcentric\\PageObjectModel\\YourCartPage.cs",
+              "RelativeDocumentMoniker": "proiectcentric\\PageObjectModel\\YourCartPage.cs",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\proiectcentric\\PageObjectModel\\YourCartPage.cs",
+              "RelativeToolTip": "proiectcentric\\PageObjectModel\\YourCartPage.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T09:12:59.068Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "HomePage.cs",
-              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\PageObjectModel\\HomePage.cs",
+              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\proiectcentric\\PageObjectModel\\HomePage.cs",
               "RelativeDocumentMoniker": "proiectcentric\\PageObjectModel\\HomePage.cs",
-              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\PageObjectModel\\HomePage.cs",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\proiectcentric\\PageObjectModel\\HomePage.cs",
               "RelativeToolTip": "proiectcentric\\PageObjectModel\\HomePage.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAABsAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwBoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T21:08:08.492Z"
+              "WhenOpened": "2025-05-17T21:08:08.492Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LoginPage.cs",
-              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\PageObjectModel\\LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\proiectcentric\\PageObjectModel\\LoginPage.cs",
               "RelativeDocumentMoniker": "proiectcentric\\PageObjectModel\\LoginPage.cs",
-              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\PageObjectModel\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\proiectcentric\\PageObjectModel\\LoginPage.cs",
               "RelativeToolTip": "proiectcentric\\PageObjectModel\\LoginPage.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T20:38:39.935Z"
+              "WhenOpened": "2025-05-17T20:38:39.935Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SauceDemoTest.cs",
-              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\SauceDemoTest.cs",
+              "DocumentMoniker": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\proiectcentric\\SauceDemoTest.cs",
               "RelativeDocumentMoniker": "proiectcentric\\SauceDemoTest.cs",
-              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\UnitTestProject\\UnitTestProject\\proiectcentric\\SauceDemoTest.cs",
+              "ToolTip": "C:\\Users\\sandu\\OneDrive\\Desktop\\Software_QA\\SauceDemo\\proiectcentric\\SauceDemoTest.cs",
               "RelativeToolTip": "proiectcentric\\SauceDemoTest.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswAYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwHUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-17T20:28:54.077Z",
               "EditorCaption": ""

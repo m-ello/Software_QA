@@ -131,6 +131,7 @@
   <ItemGroup>
     <Compile Include="PageObjectModel\HomePage.cs" />
     <Compile Include="PageObjectModel\LoginPage.cs" />
+    <Compile Include="PageObjectModel\YourCartPage.cs" />
     <Compile Include="SauceDemoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

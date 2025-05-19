@@ -24,6 +24,13 @@ namespace proiectcentric.PageObjectModel
         public IWebElement menuButton => wait.Until(d => d.FindElement(By.Id("react-burger-menu-btn")));
         public IWebElement logoutButton => wait.Until(d => d.FindElement(By.Id("logout_sidebar_link")));
         public IWebElement cartButton => wait.Until(d => d.FindElement(By.ClassName("shopping_cart_link")));
+        public void SortLowToHigh()
+        {
+            var sortDropdown = driver.FindElement(By.ClassName("product_sort_container"));
+            var selectElement = new SelectElement(sortDropdown);
+            selectElement.SelectByValue("lohi");
+        }
+
         public void Logout()
         {
             menuButton.Click();
@@ -40,6 +47,12 @@ namespace proiectcentric.PageObjectModel
         {
             var addToCartButton = GetProductByName(productName).FindElement(By.TagName("button"));
             addToCartButton.Click();
+        }
+
+        public void GoToCart()
+        {
+            cartButton.Click();
+            wait.Until(d => d.Url.Contains("cart.html"));
         }
     }
 }
